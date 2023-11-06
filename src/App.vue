@@ -3,8 +3,17 @@ import MainNav from "./components/MainNav.vue";
 </script>
 
 <template>
-  <MainNav />
-  <h1 class="text-5xl font-normal underline">Hello world!</h1>
+  <div class="">
+    <div class="container max-w-7xl mx-auto">
+      <MainNav />
+    </div>
+  </div>
 </template>
 
-<style scoped></style>
+<style>
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #f2f9fe;
+}
+</style>
