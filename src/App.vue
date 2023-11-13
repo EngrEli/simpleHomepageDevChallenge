@@ -1,11 +1,13 @@
 <script setup>
 import MainNav from "./components/MainNav.vue";
+import HeroSection from "./components/HeroSection.vue";
 </script>
 
 <template>
   <div class="">
     <div class="container max-w-7xl mx-auto">
       <MainNav />
+      <HeroSection />
     </div>
   </div>
 </template>

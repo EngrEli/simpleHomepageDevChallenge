@@ -9,12 +9,17 @@ module.exports = {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
       margin: {
-        "72px": "72px",
+        "50px": "50px",
+      },
+      lineHeight: {
+        "main-text": "100px",
       },
       colors: {
         dark: "#111729",
-        light: "#223344",
+        "light-text": "#223344",
+        grey: "#909193",
         "body-background": "#F2F9FE",
+        "button-color": "#2A4DD0",
       },
     },
   },
