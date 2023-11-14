@@ -4,7 +4,7 @@ import HeroSection from "./components/HeroSection.vue";
 </script>
 
 <template>
-  <div class="">
+  <div class="p-[35px] lg:p-0">
     <div class="container max-w-7xl mx-auto">
       <MainNav />
       <HeroSection />

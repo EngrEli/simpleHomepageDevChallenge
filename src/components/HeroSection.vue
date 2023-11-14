@@ -1,23 +1,23 @@
 <script setup></script>
 
 <template>
-  <div class="flex mt-[50px]">
-    <div class="left-hero flex-1 flex flex-col justify-around">
+  <div class="flex mt-[40px] flex-col-reverse lg:flex-row">
+    <div class="left-hero flex-1 flex flex-col mt-[50px]">
       <div class="left-hero-top text-base font-semibold">
         😎 SIMPLE WAY TO COMMUNICATE
       </div>
       <div
-        class="left-hero-main font-extrabold text-6xl leading-main-text text-light-text"
+        class="left-hero-main font-extrabold text-6xl leading-[100px] text-light-text mb-[20px]"
       >
         Actions for <br />
         Accessibility <br />
         in Design
       </div>
-      <div class="left-hero-sub text-lg text-light-text font-medium">
+      <div class="left-hero-sub text-lg text-grey font-medium mb-[15px]">
         The fastest way to build and deploy websites with <br />
         reusable components
       </div>
-      <div class="left-hero-action-btns">
+      <div class="left-hero-action-btns mb-[15px]">
         <button
           class="py-3 px-7 mr-8 bg-button-color text-white rounded-xl font-semibold"
         >
@@ -59,6 +59,11 @@
 
 <style>
 .check-text {
-  @apply flex items-center gap-2 text-light-text;
+  @apply flex items-center gap-2 text-grey;
+}
+
+.check-text img {
+  filter: invert(53%) sepia(13%) saturate(1663%) hue-rotate(75deg)
+    brightness(99%) contrast(88%);
 }
 </style>

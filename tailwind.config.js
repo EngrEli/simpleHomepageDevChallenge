@@ -8,12 +8,6 @@ module.exports = {
       fontFamily: {
         sans: ["Poppins", ...defaultTheme.fontFamily.sans],
       },
-      margin: {
-        "50px": "50px",
-      },
-      lineHeight: {
-        "main-text": "100px",
-      },
       colors: {
         dark: "#111729",
         "light-text": "#223344",
