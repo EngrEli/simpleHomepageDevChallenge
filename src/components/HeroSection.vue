@@ -7,7 +7,7 @@
         😎 SIMPLE WAY TO COMMUNICATE
       </div>
       <div
-        class="left-hero-main font-extrabold text-6xl leading-[100px] text-light-text mb-[20px]"
+        class="left-hero-main font-extrabold text-6xl leading-[80px] sm:leading-[100px] text-light-text mb-[20px]"
       >
         Actions for <br />
         Accessibility <br />

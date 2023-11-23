@@ -3,7 +3,7 @@
 <template>
   <label
     for="toggleThree"
-    class="flex items-center cursor-pointer select-none text-dark dark:text-white"
+    class="items-center cursor-pointer select-none text-dark dark:text-white hidden sm:flex"
   >
     <div class="relative">
       <input type="checkbox" id="toggleThree" class="peer sr-only" />

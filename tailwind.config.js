@@ -17,5 +17,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-fontawesome")({
+      version: 6,
+    }),
+  ],
 };
