@@ -1,10 +1,13 @@
 <script setup>
 import MainNav from "./components/MainNav.vue";
 import HeroSection from "./components/HeroSection.vue";
+
+// import { globalStore } from "@/stores/globalStore";
+// const globalStore = globalStore();
 </script>
 
 <template>
-  <div class="px-[15px] sm:px-[35px] lg:px-5">
+  <div class="px-[15px] py-[15px] sm:px-[35px] sm:py-0 lg:px-5">
     <div class="container max-w-7xl mx-auto">
       <MainNav />
       <HeroSection />

@@ -1,7 +1,3 @@
-<script setup>
-import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
-</script>
-
 <template>
   <header>
     <div class="flex justify-between pt-7 items-center">
@@ -19,9 +15,7 @@ import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
         <li><a href="">Contact</a></li>
       </ul>
       <ToggleThemeModeSwitchVue />
-      <div class="sm:hidden">
-        <font-awesome-icon icon="fa-solid fa-bars" size="2xl" />
-      </div>
+      <Sidebar />
     </div>
   </header>
 </template>
@@ -35,3 +29,9 @@ import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
   @apply text-light-text;
 }
 </style>
+
+<script setup>
+import { ref } from "vue";
+import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
+import Sidebar from "./Sidebar.vue";
+</script>
