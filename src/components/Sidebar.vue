@@ -1,17 +1,40 @@
 <script setup>
-import { computed, ref } from "vue";
+import { computed, ref, watch } from "vue";
+import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
 
 const sidebarOpen = ref(false);
 const sidebarClass = computed(() => {
   return sidebarOpen.value ? "active" : "";
 });
 
+// watch(sidebarOpen.value, async (newVal) => {
+//   if (sidebarOpen.value) {
+//     document.body.classList.add("no-scroll");
+//     alert("test");
+//   } else {
+//     document.body.classList.remove("no-scroll");
+//   }
+// });
+watch(
+  () => sidebarOpen.value,
+  (newValue) => {
+    if (newValue) {
+      document.body.classList.add("no-scroll");
+    } else {
+      document.body.classList.remove("no-scroll");
+    }
+  }
+);
+
 const toggleSidebar = () => {
   sidebarOpen.value = !sidebarOpen.value;
 
   // Add or remove the 'no-scroll' class to the body based on sidebar state
+  // Need ko itong ilagay sa watch
   if (sidebarOpen.value) {
     document.body.style.backgroundColor = "red";
+    document.body.classList.add("no-scroll");
+    alert("test");
   } else {
     document.body.classList.remove("no-scroll");
   }
@@ -28,18 +51,17 @@ const toggleSidebar = () => {
     <font-awesome-icon icon="fa-solid fa-bars" size="2xl" />
   </div>
   <div class="sidebar" :class="sidebarClass">
-    <div @click="toggleSidebar">
+    <div @click="toggleSidebar" class="flex justify-end my-5 mr-3">
       <font-awesome-icon icon="fa-solid fa-x" />
     </div>
 
-    <ul class="sidebar__menu">
-      <li><a>Home</a></li>
-      <li><a>Beverages</a></li>
-      <li><a>Chef</a></li>
-      <li><a>Ingredient</a></li>
-      <li><a>Stories</a></li>
-      <li><a>My Kitchen</a></li>
+    <ul class="sidebar__menu text-center">
+      <li><a>About Us</a></li>
+      <li><a>Product</a></li>
+      <li><a>Resource</a></li>
+      <li><a>Contact</a></li>
     </ul>
+    <ToggleThemeModeSwitchVue />
   </div>
   <div v-if="sidebarOpen" class="sidebar-overlay" @click="toggleSidebar"></div>
 </template>
@@ -76,6 +98,10 @@ const toggleSidebar = () => {
 
 .sidebar__menu {
   position: relative;
+}
+
+.sidebar__menu li {
+  margin: 10px 0;
 }
 
 .sidebar__show {
