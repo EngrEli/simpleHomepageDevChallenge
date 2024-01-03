@@ -28,16 +28,6 @@ watch(
 
 const toggleSidebar = () => {
   sidebarOpen.value = !sidebarOpen.value;
-
-  // Add or remove the 'no-scroll' class to the body based on sidebar state
-  // Need ko itong ilagay sa watch
-  if (sidebarOpen.value) {
-    document.body.style.backgroundColor = "red";
-    document.body.classList.add("no-scroll");
-    alert("test");
-  } else {
-    document.body.classList.remove("no-scroll");
-  }
 };
 </script>
 

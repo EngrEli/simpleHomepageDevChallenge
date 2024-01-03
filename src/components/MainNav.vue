@@ -28,6 +28,14 @@
 .nav-link li {
   @apply text-light-text;
 }
+
+.dark .nav-link li {
+  @apply text-grey;
+}
+
+.dark .nav-link .active {
+  @apply text-body-background;
+}
 </style>
 
 <script setup>

@@ -66,4 +66,9 @@
   filter: invert(53%) sepia(13%) saturate(1663%) hue-rotate(75deg)
     brightness(99%) contrast(88%);
 }
+
+.dark .left-hero-top,
+.dark .left-hero-main {
+  @apply text-body-background;
+}
 </style>

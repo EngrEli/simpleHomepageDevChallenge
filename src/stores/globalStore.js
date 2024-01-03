@@ -1,7 +1,13 @@
 import { ref } from "vue";
+import { defineStore } from "pinia";
 
 export const globalStore = defineStore("global", () => {
   const sidebarOpen = ref(false);
+  const isDarkMode = ref(false);
 
-  return { sidebarOpen };
+  const darkModeToggle = () => {
+    isDarkMode.value = !isDarkMode.value;
+  };
+
+  return { sidebarOpen, isDarkMode, darkModeToggle };
 });
