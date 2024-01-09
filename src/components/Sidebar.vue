@@ -1,20 +1,14 @@
 <script setup>
 import { computed, ref, watch } from "vue";
 import ToggleThemeModeSwitchVue from "./ToggleThemeModeSwitch.vue";
+import { globalStore } from "@/stores/globalStore";
+const global = globalStore();
 
 const sidebarOpen = ref(false);
 const sidebarClass = computed(() => {
   return sidebarOpen.value ? "active" : "";
 });
 
-// watch(sidebarOpen.value, async (newVal) => {
-//   if (sidebarOpen.value) {
-//     document.body.classList.add("no-scroll");
-//     alert("test");
-//   } else {
-//     document.body.classList.remove("no-scroll");
-//   }
-// });
 watch(
   () => sidebarOpen.value,
   (newValue) => {
@@ -29,6 +23,10 @@ watch(
 const toggleSidebar = () => {
   sidebarOpen.value = !sidebarOpen.value;
 };
+
+const bars = computed(() => {
+  return global.isDarkMode ? "#ffffff" : "#000000";
+});
 </script>
 
 <template>
@@ -38,7 +36,11 @@ const toggleSidebar = () => {
     v-if="!sidebarOpen"
     @click="sidebarOpen = !sidebarOpen"
   >
-    <font-awesome-icon icon="fa-solid fa-bars" size="2xl" />
+    <font-awesome-icon
+      icon="fa-solid fa-bars"
+      size="2xl"
+      :style="{ color: bars }"
+    />
   </div>
   <div class="sidebar" :class="sidebarClass">
     <div @click="toggleSidebar" class="flex justify-end my-5 mr-3">

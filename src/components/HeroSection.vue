@@ -29,7 +29,7 @@
           Get live demo
         </button>
       </div>
-      <div class="left-hero-bottom-part flex gap-5 text-sm">
+      <div class="left-hero-bottom-part flex gap-5 text-sm py-5">
         <div class="check-text">
           <img
             src="../assets/checkbox.svg"
