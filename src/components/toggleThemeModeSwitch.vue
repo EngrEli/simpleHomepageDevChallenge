@@ -1,7 +1,7 @@
 <template>
   <label
     for="toggleThree"
-    class="items-center cursor-pointer select-none text-dark dark:text-white hidden sm:flex"
+    class="items-center cursor-pointer select-none text-dark dark:text-white"
   >
     <div class="relative">
       <input
@@ -14,7 +14,7 @@
         class="block h-8 rounded-full bg-light-text dark:bg-dark-2 w-14"
       ></div>
       <div
-        class="absolute flex items-center justify-center w-6 h-6 transition bg-white rounded-full dark:bg-dark-5 left-1 top-1 peer-checked:translate-x-full peer-checked:test"
+        class="absolute flex items-center justify-center w-6 h-6 transition bg-white rounded-full dark:bg-dark-5 left-1 top-1 peer-checked:translate-x-full peer-checked:toggled"
       >
         <span class="text-blue-600 dark:text-light sun">
           <img
@@ -37,11 +37,11 @@
 
 <style scoped>
 /* Add any custom styles if needed */
-.peer:checked ~ .peer-checked\:test .sun {
+.peer:checked ~ .peer-checked\:toggled .sun {
   display: none;
 }
 
-.peer:checked ~ .peer-checked\:test .moon {
+.peer:checked ~ .peer-checked\:toggled .moon {
   display: block;
 }
 </style>

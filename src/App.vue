@@ -10,7 +10,6 @@ watch(
   () => global.isDarkMode,
   (newVal) => {
     document.documentElement.classList.toggle("dark", newVal);
-    console.log("test");
   }
 );
 </script>

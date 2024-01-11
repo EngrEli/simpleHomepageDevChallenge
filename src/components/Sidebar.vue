@@ -24,7 +24,7 @@ const toggleSidebar = () => {
   sidebarOpen.value = !sidebarOpen.value;
 };
 
-const bars = computed(() => {
+const darkIcon = computed(() => {
   return global.isDarkMode ? "#ffffff" : "#000000";
 });
 </script>
@@ -39,12 +39,12 @@ const bars = computed(() => {
     <font-awesome-icon
       icon="fa-solid fa-bars"
       size="2xl"
-      :style="{ color: bars }"
+      :style="{ color: darkIcon }"
     />
   </div>
   <div class="sidebar" :class="sidebarClass">
     <div @click="toggleSidebar" class="flex justify-end my-5 mr-3">
-      <font-awesome-icon icon="fa-solid fa-x" />
+      <font-awesome-icon icon="fa-solid fa-x" :style="{ color: darkIcon }" />
     </div>
 
     <ul class="sidebar__menu text-center">
@@ -113,5 +113,13 @@ const bars = computed(() => {
 
 body.no-scroll {
   overflow: hidden;
+}
+
+.dark .sidebar {
+  @apply bg-dark;
+}
+
+.dark .sidebar .sidebar__menu a {
+  @apply text-body-background;
 }
 </style>
